@@ -1,0 +1,70 @@
+@import url("reset.css");
+:root {
+    /* color */
+    --white-color: #fff;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    height: 100%;
+    /* padding-top: 3.750em; */
+    background-image: url(./img/iphone-wallpaper-city.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container > .clock-container {
+    position: relative;
+    padding-top: 3.750em;
+    font-size: 2.000em;
+    font-weight: bold;
+    color: var(--white-color);
+    z-index: 9;
+}
+
+h3.title {
+    font-size: 1.750em;
+    color: var(--white-color);
+    padding: 1.750em 0;
+}
+.grocery-container {
+    position: relative;
+    z-index: 9;
+}
+#form {
+    display: flex;
+    justify-content: center;
+}
+.add-form > input {
+    border: none;
+    border-radius: 6px 0 0 6px;
+    padding: 6px;
+}
+.submit-form {border-left: 1px solid #000;}
+.submit-form > input {
+    border: none;
+    background: var(--white-color);
+    border-radius: 0 6px 6px 0;
+    text-align: center;
+    padding: 6px;
+}
+ul.list {
+    color: var(--white-color);
+    padding: 1em 0;
+}
+ul.list li {
+    width: 20vw;
+    margin: 0 auto;
+    padding: 0.375em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* background overlay */
+.bg-overlay {
+    width: 100%; min-height: 100vh; height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
