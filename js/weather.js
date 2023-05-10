@@ -2,17 +2,6 @@
 
 window.addEventListener("DOMContentLoaded", weatherBalloon);
 
-function weatherApi() {
-    const weatherContainer = document.querySelector(".weather-info-container");
-    navigator.geolocation.getCurrentPosition((position) => {
-        let lat = position.coords.latitude;
-        let lon = position.coords.longitude;
-        let Key = "b6e7508916944709e333e076db123400";
-        let weatherApiKey = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${Key}`;
-        console.log(weatherApiKey);
-    });
-}
-
 function weatherBalloon(location) {
     const weatherDataContainer = document.querySelector(".weather-info-container");
     navigator.geolocation.getCurrentPosition((position) => {
@@ -24,7 +13,12 @@ function weatherBalloon(location) {
         .then((resp) => {return resp.json()})
         .then((data) => {
             console.log(data, data.name, data.weather[0].main, );
-            weatherDataContainer.innerHTML = `<p>${data.name}</p><p>${data.weather[0].main}</p>`;
+            weatherDataContainer.innerHTML = 
+            `
+                <p>${data.name}</p>
+                <p>${data.weather[0].main}</p>
+                <p><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"></p>
+            `;
         })
         .catch(Error);
     });

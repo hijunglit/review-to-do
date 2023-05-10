@@ -10,7 +10,7 @@
     min-height: 100vh;
     height: 100%;
     /* padding-top: 3.750em; */
-    background-image: url(./img/iphone-wallpaper-city.jpg);
+    background-image: url(../img/iphone-wallpaper-city.jpg);
     background-size: cover;
     background-position: center;
     object-fit: cover;
@@ -80,9 +80,11 @@ ul.list li span.delete {
 }
 
 .weather-info-container {
-    position: relative;
+    position: absolute;
+    right: 0; top: 0;
     color: var(--white-color);
     z-index: 9;
+    padding: 1rem;
 }
 
 /********************* desktop  *********************/
