@@ -13,6 +13,7 @@
     background-image: url(./img/iphone-wallpaper-city.jpg);
     background-size: cover;
     background-position: center;
+    object-fit: cover;
 }
 
 .container > .clock-container {
@@ -41,25 +42,34 @@ h3.title {
     border: none;
     border-radius: 6px 0 0 6px;
     padding: 6px;
+    opacity: 0.5;
 }
-.submit-form {border-left: 1px solid #000;}
+.submit-form {border-left: 1px solid #ccc;}
 .submit-form > input {
     border: none;
     background: var(--white-color);
     border-radius: 0 6px 6px 0;
     text-align: center;
     padding: 6px;
+    opacity: 0.5;
 }
 ul.list {
     color: var(--white-color);
     padding: 1em 0;
 }
 ul.list li {
-    width: 20vw;
-    margin: 0 auto;
+    position: relative;
+    width: 30vw;
+    margin: 0.375em auto;
     padding: 0.375em 0;
-    display: flex;
-    justify-content: space-between;
+    background: var(--white-color);
+    color: #000;
+    opacity: 0.5;
+    border-radius: 6px;
+    cursor: pointer;
+}
+ul.list li span.delete {
+    position: absolute; right: 0;
 }
 
 /* background overlay */
@@ -67,4 +77,18 @@ ul.list li {
     width: 100%; min-height: 100vh; height: 100%;
     position: absolute;
     background-color: rgba(0,0,0,0.5);
+}
+
+.weather-info-container {
+    position: relative;
+    color: var(--white-color);
+    z-index: 9;
+}
+
+/********************* desktop  *********************/
+@media  screen and (min-width: 1080px) {
+    .container {
+        background-image: url(./img/mac-wallpaper.jpg);
+    }
+    
 }
