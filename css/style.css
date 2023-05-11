@@ -86,11 +86,17 @@ ul.list li span.delete {
     z-index: 9;
     padding: 1rem;
 }
+.weather-info-container p {
+    padding-bottom: 0.500em;
+}
+.weather-info-container img {
+    width: 70%;
+}
 
 /********************* desktop  *********************/
 @media  screen and (min-width: 1080px) {
     .container {
-        background-image: url(./img/mac-wallpaper.jpg);
+        background-image: url(../img/mac-wallpaper.jpg);
     }
     
 }
